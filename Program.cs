@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace COMP003A.Assignment5
+namespace COMP003A.LectureActivity5
 {
     class Program
     {
