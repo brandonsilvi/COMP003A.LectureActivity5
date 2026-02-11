@@ -5,18 +5,27 @@ namespace COMP003A.Assignment5
     class Program
     {
         static void Main(string[] args)
-        {
+        {// The scope improves the programs safety by making variables local and avoids naming conflicts. 
             DisplayWelcome();  //method call
 
             string userName = "Alex";
             int userAge = 20;
             DisplayUserInfo(userName, userAge);
             int sum = CalculateSum(7, 8);
+            Console.WriteLine($"The sum is: {sum}");
+
+            if (true)
+            { //variables declared within the {} do not exist outside the {} shielding us from accidental misuse.
+                int blockVar = 100;
+                Console.WriteLine(blockVar); //blockVar can only exist inside the if block
+            }
+
+            for (int i = 1; i <= 3; i++)
+            {
+                Console.WriteLine(i);
+            }
         }
-
-
-
-
+        
         //methods _______
         static void DisplayWelcome()
         {
@@ -29,7 +38,7 @@ namespace COMP003A.Assignment5
         }
 
         static int CalculateSum(int a, int b)
-        {
+        { //Method variables are not accessible in Main since each method has its own scope.
             return a + b;
         }
 
